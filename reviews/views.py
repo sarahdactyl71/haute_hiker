@@ -15,3 +15,7 @@ def index(request):
     reviews = Review.objects.all()
     context = {'reviews': reviews, 'latest_review_list': latest_review_list}
     return render(request, 'reviews/index.html', context)
+
+def show(request, review_id):
+    review = get_object_or_404(Review, pk=review_id)
+    return render(request, 'reviews/show.html', {'review': review})
