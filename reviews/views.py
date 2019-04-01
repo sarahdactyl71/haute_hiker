@@ -13,4 +13,4 @@ from .models import Review
 def index(request):
     reviews = Review.objects.all()
     context = {'reviews': reviews}
-    return render(request, 'reviewss/index.html', context)
+    return render(request, 'reviews/index.html', context)
