@@ -9,6 +9,9 @@ class Tag(models.Model):
     created = models.DateTimeField('date created')
     updated = models.DateTimeField('date updated')
 
+    def __str__(self):
+        return self.tag_name
+
 class Review(models.Model):
     image_url = models.CharField(max_length=500)
     description = models.CharField(max_length=500)
