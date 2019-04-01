@@ -8,7 +8,7 @@ class Tag(models.Model):
     tag_name = models.CharField(max_length=20)
     created = models.DateTimeField('date created')
     updated = models.DateTimeField('date updated')
-    
+
 class Review(models.Model):
     image_url = models.CharField(max_length=500)
     description = models.CharField(max_length=500)
