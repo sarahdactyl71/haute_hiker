@@ -14,6 +14,8 @@ class Tag(models.Model):
 
 class Review(models.Model):
     image_url = models.CharField(max_length=500)
+    product_name = models.CharField(max_length=30)
+    brand = models.CharField(max_length=30)
     description = models.CharField(max_length=500)
     tags = models.ManyToManyField(Tag)
     resemblance_to_package = models.IntegerField()
@@ -22,3 +24,6 @@ class Review(models.Model):
     deliciousness_level = models.IntegerField()
     created = models.DateTimeField('date created')
     updated = models.DateTimeField('date updated')
+
+    def __str__(self):
+        return self.product_name
