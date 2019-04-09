@@ -16,7 +16,7 @@ class Review(models.Model):
     image_url = models.CharField(max_length=500)
     product_name = models.CharField(max_length=30)
     brand = models.CharField(max_length=30)
-    description = models.CharField(max_length=500)
+    description = models.CharField(max_length=2000)
     tags = models.ManyToManyField(Tag)
     resemblance_to_package = models.IntegerField()
     hot_sauce_needed = models.IntegerField()
