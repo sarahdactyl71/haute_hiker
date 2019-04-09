@@ -25,5 +25,8 @@ class Review(models.Model):
     created = models.DateTimeField('date created')
     updated = models.DateTimeField('date updated')
 
+    def overall_rating(self):
+        average = (self.resemblance_to_package + self.hot_sauce_needed + self.texture +self.deliciousness_level)/4
+
     def __str__(self):
         return self.product_name
