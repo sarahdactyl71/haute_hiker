@@ -1,7 +1,11 @@
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
 {% if latest_review_list %}
     <ul>
     {% for review in latest_review_list %}
-        <li><a href="/reviews/{{ review.id }}/">{{ review.product_name }}</a></li>
+        <h2>{{ review.product_name }}</h2>
+        <li><a href="/reviews/{{ review.id }}/"> More about this product </a></li>
         <li>{{ review.image_url}}</li>
         <li>{{ review.brand}}</li>
     {% endfor %}
