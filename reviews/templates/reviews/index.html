@@ -1,15 +1,28 @@
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+{% load static %}
 
-{% if latest_review_list %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Haute Hiker</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/reviews.css' %}">
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+    {% if latest_review_list %}
     <ul>
-    {% for review in latest_review_list %}
-        <h2>{{ review.product_name }}</h2>
-        <li><a href="/reviews/{{ review.id }}/"> More about this product </a></li>
-        <li>{{ review.image_url}}</li>
-        <li>{{ review.brand}}</li>
-    {% endfor %}
+      {% for review in latest_review_list %}
+      <h2>{{ review.product_name }}</h2>
+      <li><a href="/reviews/{{ review.id }}/"> More about this product </a></li>
+      <li>{{ review.image_url}}</li>
+      <li>{{ review.brand}}</li>
+      {% endfor %}
     </ul>
-{% else %}
+    {% else %}
     <p>No reviews are available.</p>
-{% endif %}
+    {% endif %}
+
+  </body>
+</html>
