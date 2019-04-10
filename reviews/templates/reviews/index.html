@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <body>
-
+{% block content %}
     {% if latest_review_list %}
     <ul>
       {% for review in latest_review_list %}
@@ -20,6 +17,4 @@
     {% else %}
     <p>No reviews are available.</p>
     {% endif %}
-
-  </body>
-</html>
+{% endblock %}
