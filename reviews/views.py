@@ -13,7 +13,7 @@ from .models import Review
 def index(request):
     latest_review_list = Review.objects.order_by('-created')[:5]
     reviews = Review.objects.all()
-    context = {'reviews': reviews, 'latest_review_list': latest_review_list}
+    context = {"home_page": "active, "'reviews': reviews, 'latest_review_list': latest_review_list}
     return render(request, 'reviews/index.html', context)
 
 def show(request, review_id):
@@ -21,7 +21,9 @@ def show(request, review_id):
     return render(request, 'reviews/show.html', {'review': review})
 
 def about(request):
-    return render(request, 'reviews/about.html')
+    context = {"about_page": "active"}
+    return render(request, 'reviews/about.html', context)
 
 def contact(request):
-    return render(request, 'reviews/contact.html')
+    context = {"contact_page": "active"}
+    return render(request, 'reviews/contact.html', context)
