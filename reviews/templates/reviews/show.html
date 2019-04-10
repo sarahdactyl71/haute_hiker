@@ -5,12 +5,12 @@
 
   <ul>
     <li> {{ review.image_url }}</li>
-    <li> {{ review.brand }}</li>
-    <li> {{ review.description }}</li>
+    <li> Brand: {{ review.brand }}</li>
+    <li> Impressions: {{ review.description }}</li>
+    <li> Resemblance to Package: {{ review.resemblance_to_package }}</li>
+    <li> How Much Hot Sauce Needed to Make it Edible? {{ review.hot_sauce_needed }}</li>
+    <li> Texture: {{ review.texture }}</li>
+    <li> Overall Tastiness: {{ review.deliciousness_level }}</li>
     <li> {{ review.tags }}</li>
-    <li> {{ review.resemblance_to_package }}</li>
-    <li> {{ review.hot_sauce_needed }}</li>
-    <li> {{ review.texture }}</li>
-    <li> {{ review.deliciousness_level }}</li>
   </ul>
 {% endblock %}
