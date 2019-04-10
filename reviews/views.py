@@ -19,3 +19,9 @@ def index(request):
 def show(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
     return render(request, 'reviews/show.html', {'review': review})
+
+def about(request):
+    return render(request, 'reviews/about.html')
+
+def contact(request):
+    return render(request, 'reviews/contact.html')
