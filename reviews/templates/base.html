@@ -1,19 +1,20 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <title>Haute Hiker</title>
+  <title>Haute Hiker</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/reviews.css' %}">
+  <meta charset="utf-8">
 </head>
 
 <body>
-    <div id="sidebar">
-        {% block sidebar %}
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog/">Blog</a></li>
-        </ul>
-        {% endblock %}
-    </div>
+  <div class="page-header">
+      <h1><a href="/">Haute Hiker</a></h1>
+  </div>
 
     <div id="content">
         {% block content %}{% endblock %}
