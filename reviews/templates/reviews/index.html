@@ -21,11 +21,11 @@
       {% for review in latest_review_list %}
       <div class="review">
         <h2>{{ review.product_name }}</h2>
-        <li>{{ review.description }}</li>
+        <li>Impressions: {{ review.description }}</li>
         <li><a href="/reviews/{{ review.id }}/"> More about this product </a></li>
         <li>{{ review.image_url}}</li>
-        <li>{{ review.brand}}</li>
-        <li>{{ review.overall_rating }}</li>
+        <li>Brand: {{ review.brand}}</li>
+        <li>Overall Rating: {{ review.overall_rating }}</li>
       </div>
       {% endfor %}
     </ul>
