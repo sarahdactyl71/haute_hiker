@@ -1,12 +1,16 @@
-<h2> {{ review.product_name }} </h2>
+{% extends "base.html" %}
 
-<ul>
-  <li> {{ review.image_url }}</li>
-  <li> {{ review.brand }}</li>
-  <li> {{ review.description }}</li>
-  <li> {{ review.tags }}</li>
-  <li> {{ review.resemblance_to_package }}</li>
-  <li> {{ review.hot_sauce_needed }}</li>
-  <li> {{ review.texture }}</li>
-  <li> {{ review.deliciousness_level }}</li>
-</ul>
+{% block content %}
+  <h2> {{ review.product_name }} </h2>
+
+  <ul>
+    <li> {{ review.image_url }}</li>
+    <li> {{ review.brand }}</li>
+    <li> {{ review.description }}</li>
+    <li> {{ review.tags }}</li>
+    <li> {{ review.resemblance_to_package }}</li>
+    <li> {{ review.hot_sauce_needed }}</li>
+    <li> {{ review.texture }}</li>
+    <li> {{ review.deliciousness_level }}</li>
+  </ul>
+{% endblock %}
