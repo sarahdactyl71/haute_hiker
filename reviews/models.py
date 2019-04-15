@@ -32,7 +32,7 @@ class Review(models.Model):
     def __str__(self):
         return self.product_name
 
-def Article(models.Model):
+class Article(models.Model):
     title = models.CharField(max_length=50)
     hiking_trail = models.CharField(max_length=50)
     image_url = models.CharField(max_length=500)
