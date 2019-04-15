@@ -30,5 +30,5 @@ def contact(request):
 
 def articles(request):
     articles = Article.objects.all()
-    context= {'articles': articles}
+    context= {"articles_page": "active", 'articles': articles}
     return render(request, 'articles/articles.html', context)
