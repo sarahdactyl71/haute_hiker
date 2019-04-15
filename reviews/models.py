@@ -36,7 +36,7 @@ class Article(models.Model):
     title = models.CharField(max_length=50)
     hiking_trail = models.CharField(max_length=50)
     image_url = models.CharField(max_length=500)
-    content = CharField(max_length=10000)
+    content = models.CharField(max_length=10000)
     reviewss = models.ManyToManyField(Review)
     created = models.DateTimeField('date created')
     updated = models.DateTimeField('date updated')
