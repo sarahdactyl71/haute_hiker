@@ -10,3 +10,10 @@ h1, h2 {
 p {
   font-family: 'Raleway', sans-serif;
 }
+
+.article-content {
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-top: 35px;
+  font-family: 'Raleway', sans-serif;
+}
