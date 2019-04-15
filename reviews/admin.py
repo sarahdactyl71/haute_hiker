@@ -8,3 +8,4 @@ from .models import Review, Tag
 
 admin.site.register(Review)
 admin.site.register(Tag)
+admin.site.register(Article)
