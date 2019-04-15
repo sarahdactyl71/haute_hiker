@@ -28,6 +28,15 @@ class Review(models.Model):
     def overall_rating(self):
         average = (self.resemblance_to_package + self.hot_sauce_needed + self.texture +self.deliciousness_level)/4
         return average
-        
+
     def __str__(self):
         return self.product_name
+
+def Article(models.Model):
+    title = models.CharField(max_length=50)
+    hiking_trail = models.CharField(max_length=50)
+    image_url = models.CharField(max_length=500)
+    content = CharField(max_length=10000)
+    reviewss = models.ManyToManyField(Review)
+    created = models.DateTimeField('date created')
+    updated = models.DateTimeField('date updated')
