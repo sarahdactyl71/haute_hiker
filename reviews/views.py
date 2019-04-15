@@ -29,6 +29,6 @@ def contact(request):
     return render(request, 'reviews/contact.html', context)
 
 def articles(request):
-    articles = Articles.objects.all()
+    articles = Article.objects.all()
     context= {'articles': articles}
     return render(request, 'articles/articles.html', context)

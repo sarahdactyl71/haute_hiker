@@ -40,3 +40,6 @@ class Article(models.Model):
     reviewss = models.ManyToManyField(Review)
     created = models.DateTimeField('date created')
     updated = models.DateTimeField('date updated')
+
+    def __str__(self):
+        return self.title
