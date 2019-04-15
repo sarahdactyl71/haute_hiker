@@ -7,7 +7,7 @@ from django.shortcuts import get_object_or_404, render, redirect
 from django.http import HttpResponse
 from django.template import loader
 from django.views.generic.edit import CreateView
-from .models import Review
+from .models import Review, Article
 
 
 def index(request):
