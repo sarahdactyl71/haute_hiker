@@ -27,3 +27,8 @@ def about(request):
 def contact(request):
     context = {"contact_page": "active"}
     return render(request, 'reviews/contact.html', context)
+
+def articles(request):
+    articles = Articles.objects.all()
+    context= {'articles': articles}
+    return render(request, 'articles/articles.html', context)
