@@ -21,3 +21,8 @@ p {
 .navbar {
   font-family: 'Armino', sans-serif;
 }
+
+.article-teaser img {
+  height: 200px;
+  width: 25%;
+}
