@@ -6,7 +6,13 @@
     {% for article in articles %}
     <div class="article-teaser">
       <img src={{ article.image_url }} />
-      {{ article.title }}
+      <ul>
+        <li>{{ article.title }}</li>
+        <li>{{ article.hiking_trail }}</li>
+        <li>{{ article.created }}</li>
+      </ul>
+      <br>
+      {{ article.content }}
     </div>
     {% endfor %}
   </div>
