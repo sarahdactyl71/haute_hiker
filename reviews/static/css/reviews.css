@@ -22,6 +22,11 @@ p {
   font-family: 'Armino', sans-serif;
 }
 
+.article-teaser {
+  padding-top: 30px;
+  padding-right: 50px;
+}
+
 .article-teaser img {
   height: 200px;
   width: 25%;
