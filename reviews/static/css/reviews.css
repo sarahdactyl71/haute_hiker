@@ -35,3 +35,7 @@ p {
 .review img {
   height: 200px;
 }
+
+.review {
+  padding-bottom: 25px;
+}
