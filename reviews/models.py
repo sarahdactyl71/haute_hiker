@@ -38,6 +38,7 @@ class Article(models.Model):
     image_url = models.CharField(max_length=500)
     content = models.CharField(max_length=10000)
     reviews = models.ManyToManyField(Review)
+    tags = models.ManyToManyField(Tag)
     created = models.DateTimeField('date created')
     updated = models.DateTimeField('date updated')
 
