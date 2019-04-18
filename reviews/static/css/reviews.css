@@ -1,5 +1,4 @@
 h1, h2 {
-    color: green;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -44,7 +43,7 @@ p {
 .fa {
   padding: 20px;
   font-size: 30px;
-  width: 50px;
+  width: 75px;
   text-align: center;
   text-decoration: none;
 }
