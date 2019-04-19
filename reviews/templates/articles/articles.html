@@ -4,21 +4,21 @@
   <div class="article-content">
     <h1> All Articles </h1>
     {% for article in articles %}
-    <div class="article-teaser">
-      <h2>{{ article.title }}</h2>
-      <img src={{ article.image_url }} />
-      <ul>
-        <li>{{ article.hiking_trail }}</li>
-        <li>{{ article.created }}</li>
-      </ul>
-      {% for tag in article.tags.all %}
+    <h2>{{ article.title }}</h2>
+      <div class="article-teaser">
+        <img src={{ article.image_url }} />
+        <ul>
+          <li>{{ article.hiking_trail }}</li>
+          <li>{{ article.created }}</li>
+        </ul>
+        {% for tag in article.tags.all %}
         {{ tag.tag_name }}
-      {% empty %}
+        {% empty %}
         No tags!
-      {% endfor %}
-      <br>
-      {{ article.content }}
-    </div>
+        {% endfor %}
+        <br>
+        {{ article.content }}
+      </div>
     {% endfor %}
   </div>
 {% endblock %}

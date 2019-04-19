@@ -27,6 +27,8 @@ p {
 }
 
 .article-teaser {
+  display: flex;
+  flex-direction: row;
   padding-top: 30px;
   padding-right: 50px;
 }
