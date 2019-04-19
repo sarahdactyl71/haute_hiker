@@ -10,8 +10,12 @@
       <ul>
         <li>{{ article.hiking_trail }}</li>
         <li>{{ article.created }}</li>
-        <li>{{ article.tags }}</li>
       </ul>
+      {% for tag in article.tags.all %}
+        {{ tag.tag_name }}
+      {% empty %}
+        No tags!
+      {% endfor %}
       <br>
       {{ article.content }}
     </div>

@@ -12,8 +12,13 @@
     <li> How Much Hot Sauce Needed to Make it Edible? {{ review.hot_sauce_needed }}</li>
     <li> Texture: {{ review.texture }}</li>
     <li> Overall Tastiness: {{ review.deliciousness_level }}</li>
-    <li> {{ review.tags }}</li>
+    <li>{{ review.created }}</li>
   </ul>
+  {% for tag in review.tags.all %}
+    {{ tag.tag_name }}
+  {% empty %}
+    No tags!
+  {% endfor %}
 </div>
 
 {% endblock %}
