@@ -7,8 +7,8 @@
         {% for review in latest_review_list %}
         <div class="review">
           <h2>{{ review.product_name }}</h2>
-          <li>Impressions: {{ review.description }}</li>
           <li><img src={{ review.image_url }} /></li>
+          <li>Impressions: {{ review.description }}</li>
           <li>Brand: {{ review.brand}}</li>
           <li>Overall Rating: {{ review.overall_rating }}</li>
           <li><a href="/reviews/{{ review.id }}/"> Show Full Review </a></li>
