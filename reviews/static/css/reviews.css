@@ -40,10 +40,13 @@ p {
 
 .review img {
   height: 200px;
+  padding-right: 20px;
 }
 
 .review {
   padding-bottom: 25px;
+  display: flex;
+  flex-direction: row;
 }
 
 /* Style all font awesome icons */
