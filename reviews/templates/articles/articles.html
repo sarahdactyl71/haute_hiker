@@ -9,15 +9,20 @@
         <img src={{ article.image_url }} />
         <ul>
           <li>{{ article.hiking_trail }}</li>
+          <br>
           <li>{{ article.created }}</li>
+          <br>
+          <li>{{ article.content }}</li>
+          <br>
+          <li>
+            {% for tag in article.tags.all %}
+            {{ tag.tag_name }}
+            {% empty %}
+            No tags!
+            {% endfor %}
+          </li>
         </ul>
-        {% for tag in article.tags.all %}
-        {{ tag.tag_name }}
-        {% empty %}
-        No tags!
-        {% endfor %}
         <br>
-        {{ article.content }}
       </div>
     {% endfor %}
   </div>
