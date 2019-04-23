@@ -2,15 +2,19 @@
 
 {% block content %}
     {% if latest_review_list %}
-      <ul>
+      <ul style="list-style: none;">
       <div class="article-content">
         {% for review in latest_review_list %}
         <div class="review">
           <h2>{{ review.product_name }}</h2>
           <li><img src={{ review.image_url }} /></li>
+          <br>
           <li>Impressions: {{ review.description }}</li>
+          <br>
           <li>Brand: {{ review.brand}}</li>
+          <br>
           <li>Overall Rating: {{ review.overall_rating }}</li>
+          <br>
           <li><a href="/reviews/{{ review.id }}/"> Show Full Review </a></li>
         </div>
         {% endfor %}
