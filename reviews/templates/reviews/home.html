@@ -2,25 +2,26 @@
 
 
 {% block content %}
-{% for review in latest_review_list %}
-  <h2>{{ review.product_name }}</h2>
-    <div class="review">
-      <img src={{ review.image_url }} />
-      <ul style="list-style: none;">
-        <li>Impressions: {{ review.description }}</li>
-        <br>
-        <li>Brand: {{ review.brand}}</li>
-        <br>
-        <li>Overall Rating: {{ review.overall_rating }}</li>
-        <br>
-        <li><a href="/reviews/{{ review.id }}/"> Show Full Review </a></li>
-    </ul>
-    </div>
-{% endfor %}
 <div class="article-content">
-  <h1> All Articles </h1>
-  {% for article in latest_article_list %}
-  <h2>{{ article.title }}</h2>
+  {% for review in latest_review_list %}
+  <h2>{{ review.product_name }}</h2>
+  <div class="review">
+    <img src={{ review.image_url }} />
+    <ul style="list-style: none;">
+      <li>Impressions: {{ review.description }}</li>
+      <br>
+      <li>Brand: {{ review.brand}}</li>
+      <br>
+      <li>Overall Rating: {{ review.overall_rating }}</li>
+      <br>
+      <li><a href="/reviews/{{ review.id }}/"> Show Full Review </a></li>
+    </ul>
+  </div>
+  {% endfor %}
+  <div class="article-content">
+    <h1> All Articles </h1>
+    {% for article in latest_article_list %}
+    <h2>{{ article.title }}</h2>
     <div class="article-teaser">
       <img src={{ article.image_url }} />
       <ul style="list-style: none;">
@@ -40,6 +41,7 @@
       </ul>
       <br>
     </div>
-  {% endfor %}
+    {% endfor %}
+  </div>
 </div>
 {% endblock %}
