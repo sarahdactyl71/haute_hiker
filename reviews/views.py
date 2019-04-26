@@ -10,11 +10,11 @@ from django.views.generic.edit import CreateView
 from .models import Review, Article
 
 
-def index(request):
+def reviews(request):
     latest_review_list = Review.objects.order_by('-created')[:5]
     reviews = Review.objects.all()
     context = {"home_page": "active", 'reviews': reviews, 'latest_review_list': latest_review_list}
-    return render(request, 'reviews/index.html', context)
+    return render(request, 'reviews/reviews.html', context)
 
 def show(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
