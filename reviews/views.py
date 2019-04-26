@@ -11,8 +11,8 @@ from .models import Review, Article
 
 def home(request):
     latest_review_list = Review.objects.order_by('-created')[:5]
-    latest_artcile_list = Article.objects.order_by('-created')[:5]
-    context = {'latest_review_list': latest_review_list, 'latest_artcile_list': latest_artcile_list}
+    latest_article_list = Article.objects.order_by('-created')[:5]
+    context = {'latest_review_list': latest_review_list, 'latest_article_list': latest_article_list}
     return render(request, 'reviews/home.html', context)
 
 def reviews(request):
