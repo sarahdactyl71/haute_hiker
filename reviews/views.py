@@ -10,9 +10,11 @@ from django.views.generic.edit import CreateView
 from .models import Review, Article
 
 def home(request):
-    context = {}
+    latest_review_list = Review.objects.order_by('-created')[:5]
+    latest_artcile_list = Article.objects.order_by('-created')[:5]
+    context = {'latest_review_list': latest_review_list, 'latest_artcile_list': latest_artcile_list}
     return render(request, 'reviews/home.html', context)
-    
+
 def reviews(request):
     latest_review_list = Review.objects.order_by('-created')[:5]
     reviews = Review.objects.all()
