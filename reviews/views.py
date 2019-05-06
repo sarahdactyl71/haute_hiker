@@ -40,4 +40,4 @@ def articles(request):
 
 def show_article(request):
     artcile = get_object_or_404(Artcile, pk=article_id)
-    return render(request, 'articles/show_article', {'article': article})
+    return render(request, 'articles/show_article.html', {'article': article})
