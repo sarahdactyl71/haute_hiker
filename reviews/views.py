@@ -37,3 +37,7 @@ def articles(request):
     articles = Article.objects.all()
     context= {"articles_page": "active", 'articles': articles}
     return render(request, 'articles/articles.html', context)
+
+def show_article(request):
+    artcile = get_object_or_404(Artcile, pk=article_id)
+    return render(request, 'articles/show_article', {'article': article})
