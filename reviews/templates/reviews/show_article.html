@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="article-content">
+    <h1>{{ article.title }}</h1>
+    <div class="article-teaser">
+      <img src={{ article.image_url }} />
+      <ul style="list-style: none;">
+        <li>{{ article.hiking_trail }}</li>
+        <br>
+        <li>{{ article.created }}</li>
+        <br>
+        <li>{{ article.content }}</li>
+        <br>
+        <li><a href="/articles/{{ article.id }}/"> Show Full Article </a></li>
+        <br>
+        <li>
+          {% for tag in article.tags.all %}
+          {{ tag.tag_name }}
+          {% empty %}
+          No tags!
+          {% endfor %}
+        </li>
+      </ul>
+      <br>
+    </div>
+  </div>
+{% endblock %}
