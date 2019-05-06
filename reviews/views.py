@@ -38,6 +38,6 @@ def articles(request):
     context= {"articles_page": "active", 'articles': articles}
     return render(request, 'articles/articles.html', context)
 
-def show_article(request):
-    artcile = get_object_or_404(Artcile, pk=article_id)
+def show_article(request, article_id):
+    article = get_object_or_404(Article, pk=article_id)
     return render(request, 'articles/show_article.html', {'article': article})
