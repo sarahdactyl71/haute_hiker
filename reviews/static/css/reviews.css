@@ -1,20 +1,21 @@
 h1, h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Baloo Tamma', cursive;
 }
 
 p {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Baloo Da', cursive;
 }
 
 .article-content {
   padding-right: 100px;
   padding-left: 100px;
   padding-top: 35px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Baloo Da', cursive;
 }
 
 .navbar {
-  font-family: 'Armino', sans-serif;
+  font-family: 'Baloo Tamma', cursive;
+  font-size: 20px;
   color: #E6AC27;
 }
 
@@ -66,7 +67,7 @@ p {
 
 .text {
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
