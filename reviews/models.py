@@ -12,12 +12,22 @@ class Tag(models.Model):
     def __str__(self):
         return self.tag_name
 
+class Image(models.Model):
+    image_url = models.CharField(max_length=500)
+    image_title = models.CharField(max_length=50)
+    created = models.DateTimeField('date created')
+    updated = models.DateTimeField('date updated')
+
+    def __str__(self):
+        return self.image_title
+
 class Review(models.Model):
     image_url = models.CharField(max_length=500)
     product_name = models.CharField(max_length=30)
     brand = models.CharField(max_length=30)
     description = models.CharField(max_length=10000)
     tags = models.ManyToManyField(Tag)
+    images = models.ManyToManyField(Image)
     resemblance_to_package = models.IntegerField()
     hot_sauce_needed = models.IntegerField()
     texture = models.IntegerField()
@@ -39,19 +49,9 @@ class Article(models.Model):
     content = models.CharField(max_length=10000)
     reviews = models.ManyToManyField(Review)
     tags = models.ManyToManyField(Tag)
+    images = models.ManyToManyField(Image)
     created = models.DateTimeField('date created')
     updated = models.DateTimeField('date updated')
 
     def __str__(self):
         return self.title
-
-class Image(models.Model):
-    image_url = models.CharField(max_length=500)
-    image_title = models.CharField(max_length=50)
-    article = models.ForeignKey(Article, on_delete=models.CASCADE)
-    review = models.ForeignKey(Review, on_delete=models.CASCADE)
-    created = models.DateTimeField('date created')
-    updated = models.DateTimeField('date updated')
-
-def __str__(self):
-    return self.image_title
