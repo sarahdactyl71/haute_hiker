@@ -39,6 +39,7 @@ class Article(models.Model):
     content = models.CharField(max_length=10000)
     reviews = models.ManyToManyField(Review)
     tags = models.ManyToManyField(Tag)
+    images
     created = models.DateTimeField('date created')
     updated = models.DateTimeField('date updated')
 
@@ -48,6 +49,8 @@ class Article(models.Model):
 class Image(models.Model):
     image_url = models.CharField(max_length=500)
     image_title = models.CharField(max_length=50)
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    review = models.ForeignKey(Review, on_delete=models.CASCADE)
     created = models.DateTimeField('date created')
     updated = models.DateTimeField('date updated')
 
