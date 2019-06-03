@@ -37,38 +37,29 @@ p {
 /* Style for review page */
 
 .review {
-  padding-bottom: 25px;
-  display: flex;
-  flex-direction: row;
-  font-family: 'Raleway', sans-serif;
-}
-
-.container {
   position: relative;
-  width: 50%;
+  width: 25%;
 }
 
-.image {
-  display: flex;
-  width: 50%;
+.review-image {
+  width: 100%;
   height: auto;
-  flex-direction: row;
 }
 
-.overlay {
+.image-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   height: 100%;
-  width: 50%;
+  width: 100%;
   opacity: 0;
   transition: .5s ease;
   background-color: #008CBA;
 }
 
-.container:hover .overlay {
+.review:hover .image-overlay {
   opacity: 1;
 }
 

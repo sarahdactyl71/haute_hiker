@@ -4,9 +4,9 @@
     {% if latest_review_list %}
       <h1>Food Reviews</h1>
       {% for review in latest_review_list %}
-      <div class="container">
-        <img src={{ review.image_url }} alt="Avatar" class="image">
-        <div class="overlay">
+      <div class="review">
+        <img src={{ review.image_url }} alt="Avatar" class="review-image">
+        <div class="image-overlay">
           <div class="text">{{ review.product_name }}</div>
         </div>
       </div>
