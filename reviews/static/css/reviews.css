@@ -2,10 +2,6 @@ h1, h2 {
     font-family: 'Raleway', sans-serif;
 }
 
-.review {
-    font-family: 'Raleway', sans-serif;
-}
-
 p {
   font-family: 'Raleway', sans-serif;
 }
@@ -38,15 +34,52 @@ p {
   height: 200px;
 }
 
-.review img {
-  height: 200px;
-}
+/* Style for review page */
 
 .review {
   padding-bottom: 25px;
   display: flex;
   flex-direction: row;
+  font-family: 'Raleway', sans-serif;
 }
+
+.review img {
+  height: 200px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.review img:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.review img:hover {
+  background-color: #E6AC27;
+}
+
 
 /* Style all font awesome icons */
 .fa {
