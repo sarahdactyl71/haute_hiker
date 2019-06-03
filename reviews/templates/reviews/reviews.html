@@ -2,28 +2,16 @@
 
 {% block content %}
     {% if latest_review_list %}
-    <div class="article-content">
       <h1>Food Reviews</h1>
       {% for review in latest_review_list %}
-      <h2>{{ review.product_name }}</h2>
-        <div class="review">
-          <img src={{ review.image_url }} />
-          <div class="overlay">
-            <div class="text">{{ review.product_name }}</div>
-          </div>
-          <ul style="list-style: none;">
-            <li>Impressions: {{ review.description }}</li>
-            <br>
-            <li>Brand: {{ review.brand}}</li>
-            <br>
-            <li>Overall Rating: {{ review.overall_rating }}</li>
-            <br>
-            <li><a href="/reviews/{{ review.id }}/"> Show Full Review </a></li>
-        </ul>
+      <div class="container">
+        <img src={{ review.image_url }} alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">{{ review.product_name }}</div>
         </div>
+      </div>
       {% endfor %}
       {% else %}
       <p>No reviews are available.</p>
     {% endif %}
-  </div>
 {% endblock %}

@@ -43,8 +43,16 @@ p {
   font-family: 'Raleway', sans-serif;
 }
 
-.review img {
-  height: 200px;
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: flex;
+  width: 50%;
+  height: auto;
+  flex-direction: row;
 }
 
 .overlay {
@@ -54,13 +62,13 @@ p {
   left: 0;
   right: 0;
   height: 100%;
-  width: 100%;
+  width: 50%;
   opacity: 0;
   transition: .5s ease;
   background-color: #008CBA;
 }
 
-.review img:hover .overlay {
+.container:hover .overlay {
   opacity: 1;
 }
 
@@ -74,10 +82,6 @@ p {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-}
-
-.review img:hover {
-  background-color: #E6AC27;
 }
 
 
