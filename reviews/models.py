@@ -44,3 +44,12 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+
+class Image(models.Model):
+    image_url = models.CharField(max_length=500)
+    image_title = models.CharField(max_length=50)
+    created = models.DateTimeField('date created')
+    updated = models.DateTimeField('date updated')
+
+def __str__(self):
+    return self.image_title
