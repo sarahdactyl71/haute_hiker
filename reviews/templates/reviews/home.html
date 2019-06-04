@@ -3,48 +3,43 @@
 
 {% block content %}
 <div class="article-content">
-  <h1>Welcome to Haute Hiker!</h1>
-  {% for review in latest_review_list %}
-  <h2>{{ review.product_name }}</h2>
-  <div class="review">
-    <img src={{ review.image_url }} />
-    <ul style="list-style: none;">
-      <li>Impressions: {{ review.description }}</li>
-      <br>
-      <li>Brand: {{ review.brand}}</li>
-      <br>
-      <li>Overall Rating: {{ review.overall_rating }}</li>
-      <br>
-      <li><a href="/reviews/{{ review.id }}/"> Show Full Review </a></li>
-    </ul>
-  </div>
-  {% endfor %}
-  <div class="article-content">
-    <h1> All Articles </h1>
-    {% for article in latest_article_list %}
-    <h2>{{ article.title }}</h2>
-    <div class="article-teaser">
-      <img src={{ article.image_url }} />
-      <ul style="list-style: none;">
-        <li>{{ article.hiking_trail }}</li>
-        <br>
-        <li>{{ article.created }}</li>
-        <br>
-        <li>{{ article.content }}</li>
-        <br>
-        <li><a href="/articles/{{ article.id }}/"> Show Full Article </a></li>
-        <br>
-        <li>
-          {% for tag in article.tags.all %}
-          {{ tag.tag_name }}
-          {% empty %}
-          No tags!
-          {% endfor %}
-        </li>
-      </ul>
-      <br>
-    </div>
-    {% endfor %}
-  </div>
-</div>
+  <h1>Hello, and Welcome to Haute Hiker!</h1>
+  <p>
+    Like any curious, and perhaps paranoid human being, you are worried about what the
+    cusine will be like when society as we know it crumbles. Survival will depend on your
+    ability to gather resources. Chances are, you will be eating your fair share of
+    dehydrated camping food. Maybe you want to find the meal you will hate eating the least?
+    Maybe things like, mouthfeel, honest branding, and spice variety will be hard to consider
+    when you are looting a long abandonded outdoor store. It is my goal to make these
+    choices painless, so that you can enjoy your meals as your last tether to the time
+    that was. Welcome, you have come to the right place.
+  </p>
+
+  <p>
+    Okay, in all honesty you are probably a lot like me. You enjoy the outdoors.
+    Nature is where you find yourself the most content. You love taking time
+    away from the city to go camping or backpacking. You like to eat. You might even
+    consider yourself a bit of a foodie. Chances are you have eaten some camping food
+    when you thought "Good thing I am starving cause this is basically hot ham water".
+    I made this blog for me, because I am curious to see how much food I can try,
+    and if paying the few extra dollars will really boost my experience. I want to
+    see if the dehydrated salmon alfredo is delicious, or if I will be in waves of
+    regret as I shovel each bite into my hungry mouth.
+  </p>
+
+  <p>
+    I also made this blog for you. I know that there have to be more people out there
+    who are curious about the austronaut ice-cream, or the packaged creme brulee dessert,
+    but have never taken the plunge. You want to see what the texture of the huevos
+    rancheros is like. You wonder what hacks can be made, if additions of hot sauce
+    or a fried egg could maximize your outdoor culinary experience. I want to share
+    my thoughts and experiments with you. Together we can not only broaden our horizons
+    with exploration of the natural world, together we can enjoy food in those places.
+    Thank you for taking the time to read this, and please, feel free to reach out.
+  </p>
+
+  <p>
+    -Your Friend at Haute Hiker
+  </p>
+
 {% endblock %}

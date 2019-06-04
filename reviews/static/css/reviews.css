@@ -6,12 +6,6 @@ p {
   font-family: 'Baloo Da', cursive;
 }
 
-.article-content {
-  padding-right: 100px;
-  padding-left: 100px;
-  padding-top: 35px;
-  font-family: 'Baloo Da', cursive;
-}
 
 /* styling for navbar */
 
@@ -23,13 +17,15 @@ p {
 .navbar {
   font-family: 'Baloo Tamma', cursive;
   font-size: 20px;
-  color: #E6AC27;
 }
 
 .navbar li {
   padding-right: 10px;
   padding-left: 10px;
+  color: white;
 }
+
+/* Styling for articles  */
 
 .article-teaser {
   display: flex;
@@ -40,6 +36,13 @@ p {
 
 .article-teaser img {
   height: 200px;
+}
+
+.article-content {
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-top: 35px;
+  font-family: 'Baloo Da', cursive;
 }
 
 /* Style for review page */
