@@ -4,8 +4,8 @@
 <div class="review article-content">
   <h2> {{ review.product_name }} </h2>
   <br>
+  <img class="review-show-img" src={{ review.image_url }} />
   <ul>
-    <li><img src={{ review.image_url }} /></li>
     <li> Brand: {{ review.brand }}</li>
     <li> Impressions: {{ review.description }}</li>
     <li> Resemblance to Package: {{ review.resemblance_to_package }}</li>

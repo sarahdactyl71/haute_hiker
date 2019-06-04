@@ -10,17 +10,10 @@
         <ul style="list-style: none;">
           <li>TRAILHEAD: {{ article.hiking_trail }}</li>
           <br>
-          <li>{{ article.content }}</li>
+          <li>{{ article.small_blurb }}</li>
           <br>
           <li><a href="/articles/{{ article.id }}/"> Show Full Article </a></li>
           <br>
-          <li>
-            {% for tag in article.tags.all %}
-            {{ tag.tag_name }}
-            {% empty %}
-            No tags!
-            {% endfor %}
-          </li>
         </ul>
         <br>
       </div>

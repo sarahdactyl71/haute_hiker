@@ -137,6 +137,12 @@ p {
   padding-bottom: 20px;
 }
 
+/* Styling for review_show page */
+
+.review-show-img {
+  height: 300px;
+}
+
 /* Style all font awesome icons */
 .fa {
   padding: 20px;
