@@ -5,6 +5,9 @@
   <h2> {{ review.product_name }} </h2>
   <br>
   <img class="review-show-img" src={{ review.image_url }} />
+  {% for image in review.images.all %}
+      <img class="review-show-img" src={{ image.image_url }} />
+  {% endfor%}
   <ul>
     <li> Brand: {{ review.brand }}</li>
     <li> Impressions: {{ review.description }}</li>
@@ -14,11 +17,6 @@
     <li> Overall Tastiness: {{ review.deliciousness_level }}</li>
     <li>{{ review.created }}</li>
   </ul>
-  {% for tag in review.tags.all %}
-    {{ tag.tag_name }}
-  {% empty %}
-    No tags!
-  {% endfor %}
 </div>
 
 {% endblock %}
