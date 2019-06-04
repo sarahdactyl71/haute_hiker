@@ -7,12 +7,15 @@
       <div class="container">
         <div class="row">
         {% for review in latest_review_list %}
-            <div class="col-4">
-              <div class="view overlay zoom">
-                <img src={{ review.image_url }} class="img-fluid ">
-                <div class="mask flex-center">
-                  <p class="white-text">{{ review.product_name }}</p>
-                </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <div class="hovereffect">
+                <img class="img-responsive" src={{ review.image_url }} alt"">
+                   <div class="overlay">
+                    <h2>{{ review.product_name }}</h2>
+                      <p>
+                        <a href="#">LINK HERE</a>
+                      </p>
+                  </div>
               </div>
             </div>
         {% endfor %}
