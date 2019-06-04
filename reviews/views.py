@@ -16,7 +16,7 @@ def home(request):
     return render(request, 'reviews/home.html', context)
 
 def reviews(request):
-    latest_review_list = Review.objects.order_by('-created')[:5]
+    latest_review_list = Review.objects.order_by('-created')[:8]
     reviews = Review.objects.all()
     context = {"home_page": "active", 'reviews': reviews, 'latest_review_list': latest_review_list}
     return render(request, 'reviews/reviews.html', context)
