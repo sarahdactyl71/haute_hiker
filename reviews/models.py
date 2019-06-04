@@ -46,6 +46,7 @@ class Article(models.Model):
     title = models.CharField(max_length=50)
     hiking_trail = models.CharField(max_length=50)
     image_url = models.CharField(max_length=500)
+    small_blurb = models.CharField(max_length = 500)
     content = models.CharField(max_length=10000)
     reviews = models.ManyToManyField(Review)
     tags = models.ManyToManyField(Tag)
