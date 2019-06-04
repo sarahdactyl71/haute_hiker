@@ -13,6 +13,13 @@ p {
   font-family: 'Baloo Da', cursive;
 }
 
+/* styling for navbar */
+
+.navbar-brand {
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+}
+
 .navbar {
   font-family: 'Baloo Tamma', cursive;
   font-size: 20px;
@@ -92,7 +99,7 @@ p {
   text-transform: uppercase;
   text-align: center;
   position: relative;
-  font-size: 17px;
+  font-size: 20px;
   background-color: transparent;
   color: #FFF;
   padding: 1em 0;
@@ -120,6 +127,10 @@ p {
   filter: alpha(opacity=100);
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
+}
+
+.img-responsive {
+  padding-bottom: 20px;
 }
 
 /* Style all font awesome icons */
