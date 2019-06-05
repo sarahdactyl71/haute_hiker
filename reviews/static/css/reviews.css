@@ -31,12 +31,13 @@ p {
 .article-teaser {
   display: flex;
   flex-direction: row;
-  padding-top: 30px;
+  padding-top: 5px;
+  padding-bottom: 20px;
   padding-right: 20px;
 }
 
 .article-teaser img {
-  height: 200px;
+  height: 300px;
 }
 
 .article-content {
