@@ -8,15 +8,17 @@
   {% for image in review.images.all %}
       <img class="review-show-img" src={{ image.image_url }} />
   {% endfor%}
-  <ul>
-    <li> Brand: {{ review.brand }}</li>
-    <li> Impressions: {{ review.description }}</li>
-    <li> Resemblance to Package: {{ review.resemblance_to_package }}</li>
-    <li> How Much Hot Sauce Needed to Make it Edible? {{ review.hot_sauce_needed }}</li>
-    <li> Texture: {{ review.texture }}</li>
-    <li> Overall Tastiness: {{ review.deliciousness_level }}</li>
-    <li>{{ review.created }}</li>
-  </ul>
+  <div class="review-specs">
+    <ul>
+      <p> Brand: {{ review.brand }}</p>
+      <p> Impressions: {{ review.description }}</p>
+      <p> Resemblance to Package: {{ review.resemblance_to_package }}</p>
+      <p> How much hot sauce was required: {{ review.hot_sauce_needed }}</p>
+      <p> Texture: {{ review.texture }}</p>
+      <p> Overall Tastiness: {{ review.depciousness_level }}</p>
+      <p>{{ review.created }}</p>
+    </ul>
+  </div>
 </div>
 
 {% endblock %}

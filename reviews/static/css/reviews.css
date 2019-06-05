@@ -47,6 +47,16 @@ p {
   font-family: 'Baloo Da', cursive;
 }
 
+/* Style for about page */
+
+.about-content {
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-top: 35px;
+  font-family: 'Baloo Da', cursive;
+  width: 75%;
+}
+
 /* Style for review page */
 
 .image {
@@ -142,6 +152,15 @@ p {
 
 .review-show-img {
   height: 300px;
+}
+
+.review-specs {
+  padding-top: 30px;
+  width: 75%;
+}
+
+.review-specs p {
+  padding: 5px;
 }
 
 /* Style all font awesome icons */
